@@ -60,14 +60,6 @@ function loadMore() {
     
     
     
-    var addthisScript = document.createElement('script');
-        addthisScript.setAttribute('src', 'http://s7.addthis.com/js/300/addthis_widget.js#domready=1')
-        document.body.appendChild(addthisScript)
-        
-        if (window.addthis) {
-            window.addthis.ost = 0;
-            window.addthis.ready();
-  }
     
         ( function( $ ) {
         $( document.body ).on( 'post-load', function () {
@@ -77,12 +69,12 @@ function loadMore() {
         } );
           
           
-          the_content();
+ the_content();
 if($thb_ajax) {
-	echo do_shortcode('[addthis_sharing_buttons]');
+echo do_shortcode('[addthis_sharing_buttons]');
 }
           
-          if (typeof window.atnt !== ‘undefined’) {
+if (typeof window.atnt !== ‘undefined’) {
 window.atnt();
 }
     
