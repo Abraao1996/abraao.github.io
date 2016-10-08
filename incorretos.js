@@ -55,6 +55,44 @@ function loadMore() {
     if (typeof window.addthis_new_tool !== 'undefined') { 
       window.addthis_new_tool(); 
     }   
+    
+    
+    
+    
+    
+    var addthisScript = document.createElement('script');
+        addthisScript.setAttribute('src', 'http://s7.addthis.com/js/300/addthis_widget.js#domready=1')
+        document.body.appendChild(addthisScript)
+        
+        if (window.addthis) {
+            window.addthis.ost = 0;
+            window.addthis.ready();
+  }
+    
+        ( function( $ ) {
+        $( document.body ).on( 'post-load', function () {
+            addthis.toolbox('.addthis_toolbox');
+            addthis.counter('.addthis_counter');
+            addthis.init();
+        } );
+          
+          
+          the_content();
+if($thb_ajax) {
+	echo do_shortcode('[addthis_sharing_buttons]');
+}
+          
+          if (typeof window.atnt !== ‘undefined’) {
+window.atnt();
+}
+    
+    
+    
+    
+    
+    
+    
+    
     // Render Disqus comments.
     if (window.disqus_shortname) {
       loadDisqusScript(window.disqus_shortname);
