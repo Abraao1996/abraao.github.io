@@ -51,6 +51,10 @@ function loadMore() {
     if (window.gapi && window.gapi.plusone && window.gapi.plusone.go) {
       window.gapi.plusone.go();
     }
+    // Rendes Addthis.
+    if (typeof window.addthis_new_tool !== 'undefined') { 
+      window.addthis_new_tool(); 
+    }   
     // Render Disqus comments.
     if (window.disqus_shortname) {
       loadDisqusScript(window.disqus_shortname);
