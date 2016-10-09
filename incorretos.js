@@ -53,7 +53,7 @@ function loadMore() {
     }
     // Rendes Addthis.
     if (typeof window.addthis_new_tool !== 'undefined') { 
-      window.addthis_new_tool(); 
+      window.addthis_new_tool();
     }
     // Render Disqus comments.
     if (window.disqus_shortname) {
